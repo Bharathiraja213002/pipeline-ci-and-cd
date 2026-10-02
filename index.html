@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bharathiraja — Azure Infrastructure & DevOps Engineer portfolio.">
+<title>Bharathiraja | Azure Infrastructure & DevOps Engineer</title>
+<style>
+:root{
+  --bg:#05070d; --panel:rgba(14,19,31,.72); --panel2:rgba(19,27,43,.55);
+  --text:#f5f7fb; --muted:#a9b4c7; --line:rgba(255,255,255,.10);
+  --accent:#55d6ff; --accent2:#8b5cf6; --green:#55e6a5;
+  --shadow:0 24px 80px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
+radial-gradient(circle at 15% 15%,rgba(85,214,255,.12),transparent 28%),
+radial-gradient(circle at 85% 10%,rgba(139,92,246,.14),transparent 30%),var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+#bg{position:fixed;inset:0;z-index:-1;opacity:.42}
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));padding:12px 16px;border:1px solid var(--line);background:rgba(5,7,13,.64);backdrop-filter:blur(18px);border-radius:18px;z-index:20;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--shadow)}
+.logo{font-weight:800;letter-spacing:.08em}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:#fff}
+.menu{display:none;background:none;border:0;color:#fff;font-size:1.5rem}
+main{width:min(1120px,calc(100% - 28px));margin:auto}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;padding:130px 0 70px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--green);font-size:.86rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green)}
+h1{font-size:clamp(3.5rem,8vw,7rem);line-height:.92;letter-spacing:-.07em;margin:18px 0}
+.gradient{background:linear-gradient(100deg,#fff 10%,var(--accent) 55%,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:700px;color:var(--muted);font-size:1.12rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:12px 17px;border:1px solid var(--line);border-radius:12px;font-weight:700;background:rgba(255,255,255,.05);transition:.25s}.btn.primary{background:#fff;color:#05070d}.btn:hover{transform:translateY(-3px);border-color:rgba(85,214,255,.5)}
+.photo-wrap{position:relative;display:grid;place-items:center}
+.photo-ring{position:absolute;width:92%;aspect-ratio:1;border-radius:50%;background:conic-gradient(from 180deg,var(--accent),transparent 35%,var(--accent2),transparent 75%,var(--accent));filter:blur(2px);animation:spin 9s linear infinite;opacity:.85}
+@keyframes spin{to{transform:rotate(360deg)}}
+.photo{width:78%;aspect-ratio:1;object-fit:cover;object-position:center top;border-radius:28px;position:relative;border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 100px rgba(0,0,0,.55);transform:rotate(2deg);transition:.5s}
+.photo:hover{transform:rotate(0) scale(1.02)}
+.badge{position:absolute;right:2%;bottom:8%;padding:12px 15px;background:rgba(8,12,20,.82);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(16px);font-size:.82rem;box-shadow:var(--shadow)}
+section{padding:95px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}.kicker{color:var(--accent);font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}.section-head h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.05em}.section-head p{max-width:480px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:24px;border:1px solid var(--line);background:linear-gradient(145deg,var(--panel),var(--panel2));border-radius:20px;box-shadow:var(--shadow);transition:.25s;transform-style:preserve-3d}.card:hover{transform:translateY(-7px);border-color:rgba(85,214,255,.35)}.card h3{margin:10px 0 8px}.card p{color:var(--muted);font-size:.95rem}.icon{font-size:1.5rem}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.chip{padding:9px 12px;border:1px solid var(--line);border-radius:999px;color:#dce5f3;background:rgba(255,255,255,.035);font-size:.9rem}
+.timeline{position:relative;margin-left:12px;padding-left:30px;border-left:1px solid var(--line)}.timeline-item{position:relative;padding:0 0 42px}.timeline-item:before{content:"";position:absolute;left:-36px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 20px rgba(85,214,255,.7)}.timeline-item small{color:var(--accent);font-weight:800}.timeline-item h3{margin:5px 0}.timeline-item p{color:var(--muted)}
+.project{min-height:250px;display:flex;flex-direction:column;justify-content:space-between}.project .tag{display:inline-block;margin-bottom:15px;color:var(--green);font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.project .links{display:flex;gap:12px;margin-top:20px;color:var(--accent);font-weight:700;font-size:.9rem}
+.terminal{background:#070b12;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#d8e1ef}.prompt{color:var(--green)}.cmd{color:var(--accent)}.terminal-line{margin:6px 0}.cursor{display:inline-block;width:8px;height:16px;background:var(--accent);vertical-align:-3px;animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.stat{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03)}.stat b{font-size:1.8rem}.stat span{display:block;color:var(--muted);font-size:.85rem}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-card{padding:32px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(85,214,255,.08),rgba(139,92,246,.08))}
+footer{padding:35px 0 55px;border-top:1px solid var(--line);color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:800px){.navlinks{display:none}.menu{display:block}.nav.open .navlinks{display:flex;position:absolute;top:58px;left:0;right:0;padding:18px;background:rgba(5,7,13,.95);border:1px solid var(--line);border-radius:16px;flex-direction:column}.hero{grid-template-columns:1fr;padding-top:130px}.photo-wrap{order:-1}.grid{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+
+<nav class="nav" id="nav">
+  <a class="logo" href="#home">BH<span>.</span></a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+    <a href="#projects">Projects</a><a href="#contact">Contact</a>
+  </div>
+  <button class="menu" id="menu" aria-label="Menu">☰</button>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="reveal">
+    <div class="eyebrow"><span class="dot"></span> Azure • Infrastructure • DevOps</div>
+    <h1>Bharathiraja<br><span class="gradient">builds reliable systems.</span></h1>
+    <p>Azure Infrastructure & DevOps Engineer with around 2 years of hands-on experience building, deploying and maintaining infrastructure across Azure, Azure Local / Stack HCI, Linux, containers and CI/CD environments.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">Explore my work ↓</a>
+      <a class="btn" href="assets/Bharathiraja_Resume.pdf" download>Download Resume</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>2+</b><span>Years experience</span></div>
+      <div class="stat"><b>Azure</b><span>Infrastructure focus</span></div>
+      <div class="stat"><b>CI/CD</b><span>Automation mindset</span></div>
+    </div>
+  </div>
+  <div class="photo-wrap reveal">
+    <div class="photo-ring"></div>
+    <img class="photo" src="assets/bharathiraja.jpg" alt="Bharathiraja professional portrait">
+    <div class="badge">⚡ Infrastructure • Cloud • Automation</div>
+  </div>
+</section>
+
+<section id="about" class="reveal">
+  <div class="section-head"><div><div class="kicker">01 / About</div><h2>From servers to cloud.</h2></div><p>I work close to the infrastructure layer — turning physical servers and clustered environments into reliable platforms for applications.</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">☁️</div><h3>Azure Infrastructure</h3><p>Azure services, Azure Arc, Azure Local / Stack HCI, VM deployment and infrastructure operations.</p></article>
+    <article class="card"><div class="icon">🛠️</div><h3>Systems Engineering</h3><p>Linux administration, Windows Server, networking, storage, high availability and troubleshooting.</p></article>
+    <article class="card"><div class="icon">🚀</div><h3>DevOps & Automation</h3><p>GitHub Actions, CI/CD, Docker, Kubernetes, shell scripting and infrastructure automation.</p></article>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <div class="section-head"><div><div class="kicker">02 / Skills</div><h2>My technical toolkit.</h2></div><p>A practical stack built around cloud infrastructure, systems and delivery automation.</p></div>
+  <div class="card">
+    <div class="skills">
+      <span class="chip">Microsoft Azure</span><span class="chip">Azure Arc</span><span class="chip">Azure Local</span><span class="chip">Azure Stack HCI</span>
+      <span class="chip">Linux</span><span class="chip">Ubuntu</span><span class="chip">Windows Server</span><span class="chip">Networking</span>
+      <span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">GitHub Actions</span><span class="chip">CI/CD</span>
+      <span class="chip">Shell Scripting</span><span class="chip">Git</span><span class="chip">Monitoring</span><span class="chip">High Availability</span>
+      <span class="chip">VM Deployment</span><span class="chip">Infrastructure Troubleshooting</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="reveal">
+  <div class="section-head"><div><div class="kicker">03 / Experience</div><h2>What I do.</h2></div><p>Hands-on infrastructure work with an emphasis on availability, deployment and operational reliability.</p></div>
+  <div class="timeline">
+    <div class="timeline-item"><small>2024 — PRESENT · TCS</small><h3>Azure Infrastructure / DevOps Engineer</h3><p>Working with Azure Stack HCI / Azure Local environments, physical server provisioning, Azure Arc onboarding, cluster operations, Linux VM deployment and infrastructure troubleshooting.</p></div>
+    <div class="timeline-item"><small>CORE RESPONSIBILITIES</small><h3>Build → Configure → Connect → Operate</h3><p>Install and configure HCI infrastructure, assign networking, onboard servers to Azure Arc, create and manage clusters, deploy VMs, perform patching and investigate storage, network and platform issues.</p></div>
+    <div class="timeline-item"><small>ENGINEERING MINDSET</small><h3>Automation & Continuous Improvement</h3><p>Exploring pipeline-driven provisioning, GitHub Actions, Terraform, containerisation and repeatable infrastructure workflows to reduce manual effort.</p></div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="section-head"><div><div class="kicker">04 / Projects</div><h2>Infrastructure in action.</h2></div><p>Selected work themes based on my hands-on Azure infrastructure experience. Client-sensitive details intentionally excluded.</p></div>
+  <div class="grid">
+    <article class="card project"><div><span class="tag">Azure Local</span><h3>HCI Cluster Platform</h3><p>Designed and operated Azure Stack HCI / Azure Local environments: server preparation, IP configuration, Arc onboarding, clustering, storage and VM lifecycle.</p></div><div class="links"><span>Azure Arc</span><span>HCI</span><span>VMs</span></div></article>
+    <article class="card project"><div><span class="tag">Linux + Cloud</span><h3>Application VM Deployment</h3><p>Provisioned Ubuntu workloads on clustered infrastructure and supported application-ready environments with networking, storage and operational checks.</p></div><div class="links"><span>Ubuntu</span><span>Networking</span><span>HA</span></div></article>
+    <article class="card project"><div><span class="tag">DevOps</span><h3>Infrastructure Automation</h3><p>Building toward repeatable provisioning with YAML pipelines, GitHub Actions, Terraform and scripting — connecting infrastructure operations with modern delivery practices.</p></div><div class="links"><span>CI/CD</span><span>Terraform</span><span>Automation</span></div></article>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-head"><div><div class="kicker">05 / Terminal</div><h2>How I think about systems.</h2></div></div>
+  <div class="terminal">
+    <div class="terminal-line"><span class="prompt">bharathiraja@cloud</span>:<span class="cmd">~</span>$ azcmagent show</div>
+    <div class="terminal-line">● Azure Arc connected — infrastructure visibility enabled</div>
+    <div class="terminal-line"><span class="prompt">bharathiraja@cloud</span>:<span class="cmd">~</span>$ kubectl get nodes</div>
+    <div class="terminal-line">● workloads healthy — automation is the next step</div>
+    <div class="terminal-line"><span class="prompt">bharathiraja@cloud</span>:<span class="cmd">~</span>$ ./keep-improving.sh <span class="cursor"></span></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-head"><div><div class="kicker">06 / Recognition</div><h2>Work that gets noticed.</h2></div></div>
+  <div class="grid">
+    <article class="card"><div class="icon">🏆</div><h3>Spot Recognition</h3><p>Recognised for contributions to infrastructure operations and maintaining high availability of servers.</p></article>
+    <article class="card"><div class="icon">⚙️</div><h3>Reliability Focus</h3><p>Hands-on troubleshooting across storage, networking, clusters, VMs and platform connectivity.</p></article>
+    <article class="card"><div class="icon">📈</div><h3>Always Learning</h3><p>Continuously expanding from infrastructure operations into DevOps, cloud automation and platform engineering.</p></article>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <div class="contact">
+    <div class="contact-card"><div class="kicker">07 / Contact</div><h2 style="font-size:2.7rem;letter-spacing:-.05em;margin:10px 0">Let's build something reliable.</h2><p style="color:var(--muted)">Open to Azure Cloud, Infrastructure, DevOps and Cloud Operations opportunities.</p></div>
+    <div class="contact-card">
+      <h3>Find me online</h3>
+      <p style="color:var(--muted);margin:8px 0 20px">Replace the placeholder links below with your profiles.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="mailto:YOUR_EMAIL@example.com">Email ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><span>© 2026 Bharathiraja</span><span>Azure • Infrastructure • DevOps</span></footer>
+</main>
+
+<script>
+const nav=document.getElementById('nav'), menu=document.getElementById('menu');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const canvas=document.getElementById('bg'),ctx=canvas.getContext('2d');
+let w,h,pts=[];
+function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight;pts=Array.from({length:55},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.6+.4}))}
+function draw(){
+ ctx.clearRect(0,0,w,h);
+ for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(120,190,255,.45)';ctx.fill()}
+ for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){let a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<125){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(120,190,255,${.12*(1-d/125)})`;ctx.stroke()}}
+ requestAnimationFrame(draw)
+}
+addEventListener('resize',resize);resize();draw();
+</script>
+</body>
+</html>
